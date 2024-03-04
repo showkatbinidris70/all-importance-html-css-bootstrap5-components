@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Row-css</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body style="background-color: #000; color: white;">
+    <!-- Responsive Design Using Row CSS Flexbox start -->
+    <style>
+        .flex-container {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            flex-wrap: wrap;
+            margin: 5px;
+        }
+
+        .flex-card {
+            width: 25%;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .flex-card {
+                width: 33.33%;
+            }
+        }
+
+        @media screen and (max-width: 991px) {
+            .flex-card {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 620px) {
+            .flex-card {
+                width: 100%;
+            }
+        }
+    </style>
+    <div class="flex-container">
+        <h1 style="padding: 10px; text-align: center; ">Responsive Design Using Row CSS Flexbox</h1>
+        <div class="flex-row">
+            <div class="flex-card">
+                <div style="margin: 10px; background-color: antiquewhite;">111 111 111 111</div>
+            </div>
+            <div class="flex-card">
+                <div style="margin: 10px; background-color: antiquewhite;">111 111 111 111</div>
+            </div>
+            <div class="flex-card">
+                <div style="margin: 10px; background-color: antiquewhite;">111 111 111 111</div>
+            </div>
+            <div class="flex-card">
+                <div style="margin: 10px; background-color: antiquewhite;">111 111 111 111</div>
+            </div>
+        </div>
+    </div>
+    <!-- Responsive Design Using Row CSS Flexbox end -->
+    <!-- Responsive Design Using Row CSS Grid start -->
+    <style>
+        .container {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            flex-wrap: wrap;
+            margin: 5px;
+        }
+
+        .card {
+            width: 25%;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .card {
+                width: 33.33%;
+            }
+        }
+
+        @media screen and (max-width: 991px) {
+            .card {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 620px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+    <div class="grid-container">
+        <h1 style="padding: 10px; text-align: center; ">Responsive Design Using Row CSS Grid</h1>
+        <div class="grid-row">
+            <div class="grid-card">
+                <div style="margin: 10px; background-color: antiquewhite;">111 111 111 111</div>
+            </div>
+            <div class="grid-card">
+                <div style="margin: 10px; background-color: antiquewhite;">111 111 111 111</div>
+            </div>
+            <div class="grid-card">
+                <div style="margin: 10px; background-color: antiquewhite;">111 111 111 111</div>
+            </div>
+            <div class="grid-card">
+                <div style="margin: 10px; background-color: antiquewhite;">111 111 111 111</div>
+            </div>
+        </div>
+    </div>
+    <!-- Responsive Design Using Row CSS Grid end -->
+</body>
+
+</html>
