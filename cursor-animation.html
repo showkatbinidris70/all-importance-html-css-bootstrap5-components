@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul,
+        ol,
+        a,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        body {
+            font-family: "Roboto";
+            box-sizing: border-box;
+        }
+
+        :root {
+            font-size: 18px;
+            --background-color: #4d5061;
+            --inner-cursor-border-color: rgba(0, 255, 30, 0.25);
+            --mid-cursor-border-color: rgba(203, 55, 55, 0.5);
+            --outer-cursor-border-color: rgba(1, 5, 16, 0.983);
+
+            --inner-border-size: 1px;
+            --mid-border-size: 2px;
+            --outer-border-size: 3px;
+
+            --cursor-size: 40px;
+            --inner-cursor-size: calc(0.6 * var(--cursor-size));
+            --mid-cursor-size: var(--cursor-size);
+            --outer-cursor-size: calc(0.2 * var(--cursor-size));
+
+            --inner-cursor-margin: calc((var(--mid-cursor-size) / 2) - (var(--inner-cursor-size) / 2) - var(--mid-border-size));
+            --mid-cursor-margin: calc(-0.5 * var(--mid-cursor-size));
+            --outer-cursor-margin: calc((var(--mid-cursor-size) / 2) - (var(--outer-cursor-size) / 2) - var(--mid-border-size));
+
+            --transition-duration: 100ms;
+
+            /* color */
+            --bg_dark: #000;
+            --bg_white: #ffffff;
+            --bg_secondary: rgb(0, 0, 0);
+            --bg_third: rgba(0, 0, 0, 0.5);
+
+            --text_dark: #000;
+            --text-dark-secondary: #212121;
+            --text_white: #ffffff;
+            --text_white-secondary: #ddd;
+            --text_primary: #01f1f4;
+            --text_secondary: #0066cc;
+            --box-shadow-primary: rgba(1, 241, 244, 1);
+        }
+
+        /* custom cursor start */
+        .custom-cursor::before,
+        .custom-cursor::after,
+        .custom-cursor {
+            position: absolute;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+
+        .custom-cursor::before,
+        .custom-cursor::after {
+            content: "";
+        }
+
+        .custom-cursor {
+            margin-top: var(--mid-cursor-margin);
+            margin-left: var(--mid-cursor-margin);
+            width: var(--mid-cursor-size);
+            height: var(--mid-cursor-size);
+
+            border: var(--mid-border-size) solid var(--mid-cursor-border-color);
+            display: inline-block;
+            transition-duration: var(--transition-duration);
+            transition-timing-function: ease-out;
+            animation: mid-cursor-animation 0.5s infinite alternate;
+            pointer-events: none;
+        }
+
+        .custom-cursor::before {
+            content: "";
+            border: var(--inner-border-size) solid var(--inner-cursor-border-color);
+            width: calc(var(--inner-cursor-size));
+            height: calc(var(--inner-cursor-size));
+            margin-top: var(--inner-cursor-margin);
+            margin-left: var(--inner-cursor-margin);
+            animation: inner-cursor-animation 0.11s infinity alternate;
+            animation-delay: 0.2s;
+        }
+
+        .custom-cursor::after {
+            content: "";
+            border: var(--outer-border-size) solid var(--outer-cursor-border-color);
+            width: var(--outer-cursor-size);
+            height: var(--outer-cursor-size);
+            margin-top: var(--outer-cursor-margin);
+            margin-left: var(--outer-cursor-margin);
+            animation: outer-cursor-animation 0.7s infinite alternate;
+        }
+
+        @keyframes mid-cursor-animation {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(0.7);
+            }
+        }
+
+        @keyframes outer-cursor-animation {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(0.4);
+            }
+        }
+
+        @keyframes inner-cursor-animation {
+            from {
+                transform: scale(0.1);
+            }
+
+            to {
+                transform: scale(3);
+            }
+        }
+
+        @keyframes custom-cursor-click {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(3);
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* custom cursor end */
+    </style>
+</head>
+
+<body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cursorElement = document.createElement("div");
+            cursorElement.classList.add("custom-cursor");
+            document.body.appendChild(cursorElement);
+            document.body.classList.add("custom-cursor-active");
+
+            document.addEventListener("mousemove", (e) => {
+                cursorElement.setAttribute(
+                    "style",
+                    "top: " + e.pageY + "px; left:" + e.pageX + "px;"
+                );
+            });
+
+            const customEventElements = document.querySelectorAll(
+                '[data-cursor-event="hover"]'
+            );
+
+            customEventElements.forEach(function (customElement) {
+                let currentCustomElement = customElement;
+                customElement.addEventListener("mouseenter", (e) => {
+                    cursorElement.classList.add(
+                        currentCustomElement.getAttribute("data-event-class")
+                    );
+                });
+                customElement.addEventListener("mouseout", (e) => {
+                    cursorElement.classList.remove(
+                        currentCustomElement.getAttribute("data-event-class")
+                    );
+                });
+            });
+
+            document.addEventListener("click", () => {
+                cursorElement.classList.add("custom-cursor-click");
+
+                setTimeout(() => {
+                    cursorElement.classList.remove("custom-cursor-click");
+                }, 500);
+            });
+        });
+    </script>
+</body>
+
+</html>
