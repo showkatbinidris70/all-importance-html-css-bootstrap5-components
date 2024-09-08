@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- swiper slider css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+
+  <title>বাংলাদেশ ২.০</title>
+
+  <style>
+    ._card {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-clip: border-box;
+    }
+
+    .grid_box {
+      padding: 0px 12px;
+      margin-bottom: 25px;
+    }
+
+    .service_post.style_four {
+      position: relative;
+      padding: 10px;
+      box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, .09);
+      background: #fff;
+      z-index: 0;
+      border-radius: 10px;
+      transition: all 0.6s ease-in-out;
+      -moz-transition: all 0.6s ease-in-out;
+      -ms-transition: all 0.6s ease-in-out;
+      -o-transition: all 0.6s ease-in-out;
+    }
+
+    .service_post.style_four::before {
+      position: absolute;
+      content: "";
+      width: 5px;
+      height: 50px;
+      left: 0;
+      bottom: 0;
+      background: #a12c2f;
+      opacity: 0;
+      transition: all 0.6s ease-in-out;
+      -moz-transition: all 0.6s ease-in-out;
+      -ms-transition: all 0.6s ease-in-out;
+      -o-transition: all 0.6s ease-in-out;
+      top: 100%;
+      z-index: 1;
+    }
+
+    .service_post.style_four .image_box {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+
+    .service_post.style_four .image_box img {
+      height: 300px;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+
+    .service_post.style_four:hover::before {
+      opacity: 1;
+      top: 50px;
+    }
+
+    .service_post.style_four::before {
+      position: absolute;
+      content: "";
+      width: 5px;
+      height: 50px;
+      left: 0;
+      bottom: 0;
+      background: #a12c2f;
+      opacity: 0;
+      transition: all 0.6s ease-in-out;
+      -moz-transition: all 0.6s ease-in-out;
+      -ms-transition: all 0.6s ease-in-out;
+      -o-transition: all 0.6s ease-in-out;
+      top: 100%;
+      z-index: 1;
+    }
+
+    .service_post.style_four:hover::after {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .service_post.style_four::after {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 10px;
+      left: 38px;
+      top: 40px;
+      background: #f0f3f9;
+      transition: all 0.6s ease-in-out;
+      -moz-transition: all 0.6s ease-in-out;
+      -ms-transition: all 0.6s ease-in-out;
+      -o-transition: all 0.6s ease-in-out;
+      z-index: -1;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+          <div class="grid_box _card">
+            <div class="service_post style_four">
+              <div class="image_box">
+                <img src="./assets/images/department-img-1.png" class="img-fluid rounded" alt="" srcset="">
+              </div>
+              <div class="card-info">
+                <h5 class="text-dark mx-3 py-1">নাম: সারজিস আলম</h5>
+                <h6 class="text-dark mx-3"> প্রতিষ্ঠান: ঢাকা বিশ্ববিদ্যালয়</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <!-- bootstratp 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- swiper slider js  -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- pure counter -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+
+
+  <script src="./assets/js/slider.js"></script>
+</body>
+
+</html>
