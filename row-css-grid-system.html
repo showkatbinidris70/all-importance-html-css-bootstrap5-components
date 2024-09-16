@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+        box-sizing: border-box;
+        }
+        .container{
+            margin: 0 auto;
+            max-width: 1140px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        [class*="col-"]{
+            float: left;
+            padding: 12px;
+            width: 100%;
+        }
+        @media only screen and (min-width: 375.98px) {
+            .cols-s-1 {width: 8.33%;}
+            .cols-s-2 {width: 16.66%;}
+            .cols-s-3 {width: 25%;}
+            .cols-s-4 {width: 33.33%;}
+            .cols-s-5 {width: 41.33%;}
+            .cols-s-6 {width:  50%;}
+            .cols-s-7 {width: 58.33%;}
+            .cols-s-8 {width: 66.66%;}
+            .cols-s-9 {width: 75%;}
+            .cols-s-10 {width: 83.33%;}
+            .cols-s-11 {width: 91.66%;}
+            .cols-s-12 {width: 100%;}
+        }
+        @media only screen and (min-width: 575.98px) {
+            .cols-sm-1 {width: 8.33%;}
+            .cols-sm-2 {width: 16.66%;}
+            .cols-sm-3 {width: 25%;}
+            .cols-sm-4 {width: 33.33%;}
+            .cols-sm-5 {width: 41.33%;}
+            .cols-sm-6 {width:  50%;}
+            .cols-sm-7 {width: 58.33%;}
+            .cols-sm-8 {width: 66.66%;}
+            .cols-sm-9 {width: 75%;}
+            .cols-sm-10 {width: 83.33%;}
+            .cols-sm-11 {width: 91.66%;}
+            .cols-sm-12 {width: 100%;}
+        }
+        @media only screen and (min-width: 767.98px) {
+            .cols-md-1 {width: 8.33%;}
+            .cols-md-2 {width: 16.66%;}
+            .cols-md-3 {width: 25%;}
+            .cols-md-4 {width: 33.33%;}
+            .cols-md-5 {width: 41.33%;}
+            .cols-md-6 {width:  50%;}
+            .cols-md-7 {width: 58.33%;}
+            .cols-md-8 {width: 66.66%;}
+            .cols-md-9 {width: 75%;}
+            .cols-md-10 {width: 83.33%;}
+            .cols-md-11 {width: 91.66%;}
+            .cols-md-12 {width: 100%;}
+        }
+        @media only screen and (min-width: 991.98px) {
+            .cols-lg-1 {width: 8.33%;}
+            .cols-lg-2 {width: 16.66%;}
+            .cols-lg-3 {width: 25%;}
+            .cols-lg-4 {width: 33.33%;}
+            .cols-lg-5 {width: 41.33%;}
+            .cols-lg-6 {width:  50%;}
+            .cols-lg-7 {width: 58.33%;}
+            .cols-lg-8 {width: 66.66%;}
+            .cols-lg-9 {width: 75%;}
+            .cols-lg-10 {width: 83.33%;}
+            .cols-lg-11 {width: 91.66%;}
+            .cols-lg-12 {width: 100%;}
+        }
+    
+        @media only screen and (min-width: 1199.98px) {
+            .cols-xl-1 {width: 8.33%;}
+            .cols-xl-2 {width: 16.66%;}
+            .cols-xl-3 {width: 25%;}
+            .cols-xl-4 {width: 33.33%;}
+            .cols-xl-5 {width: 41.33%;}
+            .cols-xl-6 {width:  50%;}
+            .cols-xl-7 {width: 58.33%;}
+            .cols-xl-8 {width: 66.66%;}
+            .cols-xl-9 {width: 75%;}
+            .cols-xl-10 {width: 83.33%;}
+            .cols-xl-11 {width: 91.66%;}
+            .cols-xl-12 {width: 100%;}
+        }
+    
+
+        @media only screen and (min-width: 1399.98px) {
+            .cols-xxl-1 {width: 8.33%;}
+            .cols-xxl-2 {width: 16.66%;}
+            .cols-xxl-3 {width: 25%;}
+            .cols-xxl-4 {width: 33.33%;}
+            .cols-xxl-5 {width: 41.33%;}
+            .cols-xxl-6 {width:  50%;}
+            .cols-xxl-7 {width: 58.33%;}
+            .cols-xxl-8 {width: 66.66%;}
+            .cols-xxl-9 {width: 75%;}
+            .cols-xxl-10 {width: 83.33%;}
+            .cols-xxl-11 {width: 91.66%;}
+            .cols-xxl-12 {width: 100%;}
+        }
+   
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row" style="background-color: aliceblue;">
+            <div class="cols-xxl-2 cols-xl-2 cols-lg-3 cols-md-4 cols-sm-6 col-12">11</div>
+            <div class="cols-xxl-2 cols-xl-2 cols-lg-3 cols-md-4 cols-sm-6 col-12">11</div>
+            <div class="cols-xxl-2 cols-xl-2 cols-lg-3 cols-md-4 cols-sm-6 col-12">11</div>
+            <div class="cols-xxl-2 cols-xl-2 cols-lg-3 cols-md-4 cols-sm-6 col-12">11</div>
+            <div class="cols-xxl-2 cols-xl-2 cols-lg-3 cols-md-4 cols-sm-6 col-12">11</div>
+            <div class="cols-xxl-2 cols-xl-2 cols-lg-3 cols-md-4 cols-sm-6 col-12">11</div>
+        </div>
+        <div class="row" style="background-color: antiquewhite;">
+            <div class="cols-xxl-3 cols-xl-3 cols-lg-4 cols-md-6 cols-sm-6 col-12">11</div>
+            <div class="cols-xxl-3 cols-xl-3 cols-lg-4 cols-md-6 cols-sm-6 col-12">11</div>
+            <div class="cols-xxl-3 cols-xl-3 cols-lg-4 cols-md-6 cols-sm-6 col-12">11</div>
+            <div class="cols-xxl-3 cols-xl-3 cols-lg-4 cols-md-6 cols-sm-6 col-12">11</div>
+        </div>
+        <div class="row" style="background-color: rgb(228, 218, 205);">
+            <div class="cols-xxl-4 cols-xl-4 cols-lg-4 cols-md-6 cols-sm-6 col-12">11</div>
+            <div class="cols-xxl-4 cols-xl-4 cols-lg-4 cols-md-6 cols-sm-6 col-12">11</div>
+            <div class="cols-xxl-4 cols-xl-4 cols-lg-4 cols-md-6 cols-sm-6 col-12">11</div>
+        </div>
+        <div class="row" style="background-color: rgb(226, 221, 213);">
+            <div class="cols-xxl-6 cols-xl-6 cols-lg-6 cols-md-6 cols-sm-6 col-12">11</div>
+            <div class="cols-xxl-6 cols-xl-6 cols-lg-6 cols-md-6 cols-sm-6 col-12">11</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
