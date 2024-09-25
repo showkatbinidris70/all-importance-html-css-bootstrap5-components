@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li {
+            height: 40px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="https://css-shape.com/">css-shape.com</a></li>
+        <li><a href="https://www.softr.io/tools/svg-shape-generator">Blob shape-generator</a></li>
+        <li><a href="https://wavelry.vercel.app/">wave generate</a></li>
+        <li><a href="https://www.softr.io/tools/svg-wave-generator">Wave Generate</a></li>
+        <li><a href="https://getwaves.io/">Wave Generate</a></li>
+        <li><a href="https://svgwave.in/" style="color: red;">Live Wave Generate</a></li>
+        <li><a href="https://app.haikei.app/" style="color: rgb(0, 119, 255);">Some Shape Generate</a></li>
+        <li><a href="https://www.blobmaker.app/">Blob Image Maker</a></li>
+        <li><a href="https://9elements.github.io/fancy-border-radius/#30.30.30.63--.">Blob Image Maker</a></li>
+    </ul>
+
+
+    <div>
+        <h1 style="text-align: center; color: red;">How to use gradient color in svg</h1>
+
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Define the gradient -->
+            <defs>
+                <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ff7e5f; stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#240fac; stop-opacity:1" />
+                </linearGradient>
+            </defs>
+
+            <!-- Apply the gradient to the path -->
+            <path fill="url(#myGradient)"
+                d="M42.1,-42.1C58.3,-36.5,77.9,-26.9,85.2,-11.2C92.5,4.4,87.4,26,76.9,44.5C66.3,62.9,50.2,78.3,31.1,85.2C11.9,92,-10.2,90.5,-25.4,80.4C-40.5,70.2,-48.7,51.5,-57.5,34.2C-66.3,16.9,-75.7,1,-76.1,-16.3C-76.4,-33.5,-67.7,-51.9,-53.5,-57.9C-39.4,-63.8,-19.7,-57.3,-3.4,-53.2C12.9,-49.2,25.8,-47.7,42.1,-42.1Z"
+                transform="translate(100 100)" />
+        </svg>
+
+    </div>
+</body>
+
+</html>
