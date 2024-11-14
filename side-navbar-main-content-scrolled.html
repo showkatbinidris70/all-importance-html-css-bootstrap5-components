@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        .hero-section {
+            background-image: url('images/hero-img.png');
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+        }
+
+        .fixed-image {
+            position: sticky;
+            padding-top: 100px;
+        }
+
+        .scrollable-images {
+            height: 100vh;
+            overflow-y: auto;
+            scrollbar-width: none;
+        }
+
+        .scrollable-images::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hero-section .container-fluid {
+            display: block;
+        }
+
+        .hero-section .navbar-nav {
+            display: block;
+        }
+
+        .navbar .navbar-nav .nav-link.active {
+            color: red !important;
+        }
+
+
+        @media (max-width: 991px) {
+            .hero-section {
+                height: 100%;
+            }
+
+            .hero-section .container-fluid {
+                display: flex;
+            }
+
+            .navbar {
+                transition: top 0.3s;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                z-index: 9999;
+            }
+
+            .navbar.hide-navbar {
+                top: -60px;
+            }
+        }
+    </style>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-4">
+                    <div class="d-flex align-items-center w-100 h-100">
+                        <div>
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                <div class="container-fluid">
+                                    <a class="navbar-brand" href="#">Navbar</a>
+                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                        aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#about">about</a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#contact" tabindex="-1"
+                                                    aria-disabled="true">contact</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="container-fluid d-none">
+                                    <a class="navbar-brand" href="#">Navbar</a>
+                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                        aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#about">About</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#contact">Contact</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                            <img src="images/testimonial-img-2.jpg" class="img-fluid mb-3" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right column with scrollable images -->
+                <div class="col-sm-12 col-lg-8">
+
+                    <div class="scrollable-images">
+                        <section id="home">
+                            <h1>Home</h1>
+                            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed! Blanditiis
+                                consectetur
+                                quos consequuntur enim nam unde dolor! Ducimus vero soluta id ut placeat eos architecto
+                                iste
+                                repellat qui laborum.</h1>
+                            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed! Blanditiis
+                                consectetur
+                                quos consequuntur enim nam unde dolor! Ducimus vero soluta id ut placeat eos architecto
+                                iste
+                                repellat qui laborum.</h1>
+                            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed! Blanditiis
+                                consectetur
+                                quos consequuntur enim nam unde dolor! Ducimus vero soluta id ut placeat eos architecto
+                                iste
+                                repellat qui laborum.</h1>
+                            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed! Blanditiis
+                                consectetur
+                                quos consequuntur enim nam unde dolor! Ducimus vero soluta id ut placeat eos architecto
+                                iste
+                                repellat qui laborum.</h1>
+                            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed! Blanditiis
+                                consectetur
+                                quos consequuntur enim nam unde dolor! Ducimus vero soluta id ut placeat eos architecto
+                                iste
+                                repellat qui laborum.</h1>
+                            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed! Blanditiis
+                                consectetur
+                                quos consequuntur enim nam unde dolor! Ducimus vero soluta id ut placeat eos architecto
+                                iste
+                                repellat qui laborum.</h1>
+                            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed! Blanditiis
+                                consectetur
+                                quos consequuntur enim nam unde dolor! Ducimus vero soluta id ut placeat eos architecto
+                                iste
+                                repellat qui laborum.</h1>
+                        </section>
+                        <section id="about">
+                            <h1>About</h1>
+                            <img src="images/testimonial-img-2.jpg" class="img-fluid mb-3" alt="">
+                            <img src="images/testimonial-img-2.jpg" class="img-fluid mb-3" alt="">
+                        </section>
+                        <section id="contact">
+                            <h1>Contact</h1>
+                            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed! Blanditiis
+                                consectetur
+                                quos consequuntur enim nam unde dolor! Ducimus vero soluta id ut placeat eos architecto
+                                iste
+                                repellat qui laborum.</h1>
+                            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed! Blanditiis
+                                consectetur
+                                quos consequuntur enim nam unde dolor! Ducimus vero soluta id ut placeat eos architecto
+                                iste
+                                repellat qui laborum.</h1>
+                            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed! Blanditiis
+                                consectetur
+                                quos consequuntur enim nam unde dolor! Ducimus vero soluta id ut placeat eos architecto
+                                iste
+                                repellat qui laborum.</h1>
+                            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed! Blanditiis
+                                consectetur
+                                quos consequuntur enim nam unde dolor! Ducimus vero soluta id ut placeat eos architecto
+                                iste
+                                repellat qui laborum.</h1>
+                            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed! Blanditiis
+                                consectetur
+                                quos consequuntur enim nam unde dolor! Ducimus vero soluta id ut placeat eos architecto
+                                iste
+                                repellat qui laborum.</h1>
+                            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed! Blanditiis
+                                consectetur
+                                quos consequuntur enim nam unde dolor! Ducimus vero soluta id ut placeat eos architecto
+                                iste
+                                repellat qui laborum.</h1>
+                            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed! Blanditiis
+                                consectetur
+                                quos consequuntur enim nam unde dolor! Ducimus vero soluta id ut placeat eos architecto
+                                iste
+                                repellat qui laborum.</h1>
+                            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed! Blanditiis
+                                consectetur
+                                quos consequuntur enim nam unde dolor! Ducimus vero soluta id ut placeat eos architecto
+                                iste
+                                repellat qui laborum.</h1>
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // document.addEventListener("scroll", function () {
+        //     const sections = document.querySelectorAll("section");
+        //     const navLinks = document.querySelectorAll(".nav-link");
+
+        //     let currentSection = "";
+
+        //     sections.forEach((section) => {
+        //         const sectionTop = section.offsetTop;
+        //         const sectionHeight = section.clientHeight;
+        //         if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+        //             currentSection = section.getAttribute("id");
+        //         }
+        //     });
+
+        //     navLinks.forEach((link) => {
+        //         link.classList.remove("active");
+        //         if (link.getAttribute("href").includes(currentSection)) {
+        //             link.classList.add("active");
+        //         }
+        //     });
+        // });
+
+        // const navLinks = document.querySelectorAll(".nav-link");
+        // navLinks.forEach((link) => {
+        //     link.addEventListener("click", function () {
+        //         navLinks.forEach((lnk) => lnk.classList.remove("active"));
+        //         link.classList.add("active");
+        //     });
+        // });
+        document.addEventListener("DOMContentLoaded", function () {
+            // Scroll event listener
+            document.addEventListener("scroll", function () {
+                const sections = document.querySelectorAll("section");
+                const navLinks = document.querySelectorAll(".nav-link");
+
+                let currentSection = "";
+
+                // Loop through each section to determine which is currently in view
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= sectionTop - sectionHeight / 3 && window.pageYOffset < sectionTop + sectionHeight) {
+                        currentSection = section.getAttribute("id");
+                    }
+                });
+
+                // Update active link based on scroll position
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href").includes(currentSection)) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+
+            // Click event listener for the nav links
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            navLinks.forEach((link) => {
+                link.addEventListener("click", function () {
+                    // Remove active class from all links
+                    navLinks.forEach((link) => link.classList.remove("active"));
+
+                    // Add active class to the clicked link
+                    link.classList.add("active");
+
+                    // Collapse the navbar on mobile view after a link is clicked (optional)
+                    const navbarToggler = document.querySelector('.navbar-toggler');
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+
+                    // Check if the navbar is collapsed, then toggle it
+                    if (navbarCollapse.classList.contains('show')) {
+                        navbarToggler.click(); // Manually collapse the navbar
+                    }
+                });
+            });
+        });
+
+        // -----------------------------------
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', function () {
+            let navbar = document.querySelector('.navbar');
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop) {
+                navbar.classList.add('hide-navbar');
+            } else {
+                navbar.classList.remove('hide-navbar');
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
+</body>
+
+</html>
