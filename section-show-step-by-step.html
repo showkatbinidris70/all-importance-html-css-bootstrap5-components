@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="sections">
+        <div class="section">Section 1</div>
+        <div class="section">Section 2</div>
+        <div class="section">Section 3</div>
+        <div class="section" style="display: none;">Section 4</div>
+        <div class="section" style="display: none;">Section 5</div>
+        <div class="section" style="display: none;">Section 6</div>
+        <div class="section" style="display: none;">Section 7</div>
+        <div class="section" style="display: none;">Section 8</div>
+        <div class="section" style="display: none;">Section 9</div>
+    </div>
+    <button id="next-section-btn">Show Next Sections</button>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll(".section");
+            const nextButton = document.getElementById("next-section-btn");
+            const sectionsPerStep = 3; // Number of sections to show at each step
+            let currentIndex = 3; // Start after the initial 3 sections
+
+            nextButton.addEventListener("click", () => {
+                // Show the next set of sections
+                for (let i = currentIndex; i < currentIndex + sectionsPerStep; i++) {
+                    if (sections[i]) {
+                        sections[i].style.display = "block";
+                    }
+                }
+
+                // Update the current index
+                currentIndex += sectionsPerStep;
+
+                // Remove the button when all sections are shown
+                if (currentIndex >= sections.length) {
+                    nextButton.style.display = "none"; // Hide the button
+                }
+            });
+        });
+
+
+
+    </script>
+</body>
+
+</html>
