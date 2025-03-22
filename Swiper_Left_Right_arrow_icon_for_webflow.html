@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Text Reveal</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <style>
+        /* Ensure the Swiper container takes full width */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            margin: auto;
+        }
+
+        select {
+            appearance: none;
+            background: url('https://cdn.prod.website-files.com/64468bc7ef76aed546d87a13/64468bc7ef76ae0ff6d87a48_Down Icon.svg') no-repeat right 10px center;
+            background-size: 20px;
+            padding-right: 30px;
+        }
+
+        .w-input:focus,
+        .w-select:focus {
+            border: none !important;
+            outline: 0;
+        }
+
+        /* Style the slides */
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            border-radius: 10px;
+            overflow: hidden;
+            padding-left: 10px;
+        }
+
+
+        /*<!-- use for select box -->*/
+
+        .input-field::placeholder {
+            color: #ffffff;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var swiper = new Swiper(".swiper-container", {
+                slidesPerView: 1,  // Default for mobile
+                spaceBetween: 10,
+
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-btn-next",
+                    prevEl: ".swiper-btn-prev",
+                },
+                breakpoints: {
+                    640: { slidesPerView: 1, spaceBetween: 10 },
+                    768: { slidesPerView: 2, spaceBetween: 20 },
+                    1024: { slidesPerView: 2, spaceBetween: 30 },
+                    1280: { slidesPerView: 3, spaceBetween: 40 },
+                    1600: { slidesPerView: 4, spaceBetween: 40 },
+                },
+                on: {
+                    init: function () {
+                        updateButtonStyles(this);
+                    },
+                    slideChange: function () {
+                        updateButtonStyles(this);
+                    },
+                },
+            });
+
+            function updateButtonStyles(swiper) {
+                const prevButton = document.querySelector(".swiper-btn-prev");
+                const nextButton = document.querySelector(".swiper-btn-next");
+
+                const preIcon = document.querySelector(".pre-icon");
+                const nextIcon = document.querySelector(".next-icon");
+
+                if (swiper.isBeginning) {
+                    prevButton.style.border = "2px solid #BBBBC4";
+                    preIcon.style.color = "#BBBBC4"
+                    prevButton.style.pointerEvents = "none"; // Disable button
+                } else {
+                    prevButton.style.border = "2px solid #201F4C"; // Change color when enabled
+                    preIcon.style.color = "#201F4C"
+                    prevButton.style.pointerEvents = "auto";
+                }
+
+                if (swiper.isEnd) {
+                    nextButton.style.border = "2px solid #BBBBC4";
+                    nextIcon.style.color = "#BBBBC4"
+                    nextButton.style.pointerEvents = "none";
+                } else {
+                    nextButton.style.border = "2px solid #201F4C";
+                    nextIcon.style.color = "#201F4C"
+                    nextButton.style.pointerEvents = "auto";
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
