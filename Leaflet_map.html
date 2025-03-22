@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Map with Multiple Locations</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 650px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map centered in the USA
+        var map = L.map('map').setView([37.0902, -95.7129], 4.5); // USA Centered View
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Locations array: [Latitude, Longitude, "City Name"]
+        var locations = [
+            [33.7490, -84.3880, "Atlanta, GA"],
+            [29.7604, -95.3698, "Houston, TX"],
+            [32.7767, -96.7970, "Dallas, TX"],
+            [34.0522, -118.2437, "Los Angeles, CA"],
+            [32.7157, -117.1611, "San Diego, CA"],
+            [29.4241, -98.4936, "San Antonio, TX"]
+        ];
+
+        // Loop through locations and add markers
+        locations.forEach(function (location) {
+            L.marker([location[0], location[1]])
+                .addTo(map)
+                .bindPopup(location[2]) // City name in popup
+                .openPopup();
+        });
+    </script>
+</body>
+
+</html>
